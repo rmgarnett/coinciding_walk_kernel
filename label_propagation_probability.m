@@ -123,4 +123,5 @@ function probabilities = label_propagation_probability(problem, train_ind,
   else
     probabilities = current_probabilities(test_ind, :);
   end
+
 end
