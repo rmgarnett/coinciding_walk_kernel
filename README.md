@@ -1,5 +1,8 @@
-A MATLAB implementation of the coinciding walk kernel (CWK) and
-partially absorbing label propagation algorithms described in:
+Coinciding Walk Kernels
+=======================
+
+A MATLAB implementation of the coinciding walk kernel (CWK) described
+in:
 
 > Neumann, M., Garnett, R., and Kersting, K. Coinciding Walk
 > Kernels: Parallel Absorbing Random Walks for Learning with Graphs
