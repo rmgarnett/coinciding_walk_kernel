@@ -2,13 +2,16 @@
 %
 %   Neumann, M., Garnett, R., and Kersting, K. Coinciding Walk
 %   Kernels: Parallel Absorbing Random Walks for Learning with Graphs
-%   and Few Labels. (2013). To appear in: Proceedings of the 5th
-%   Annual Asian Conference on Machine Learning (ACML 2013).
+%   and Few Labels. (2013). Asian Conference on Machine Learning (ACML
+%   2013).
 %
-% function [K_train, K_test] = coinciding_walk_kernel(A, train_ind, ...
+% Usage:
+%
+%   [K_train, K_test] = coinciding_walk_kernel(A, train_ind, ...
 %           observed_labels, test_ind, num_classes, walk_length, varargin)
 %
-% required inputs:
+% Required inputs:
+%
 %                 A: the adjacency matrix for the graph under
 %                    consideration
 %         train_ind: a list of indices into A comprising the
@@ -20,7 +23,8 @@
 %      num_classses: the number of classes
 %       walk_length: the maximum walk length for the CWK
 %
-% optional named arguments specified after requried inputs:
+% Optional named arguments specified after requried inputs:
+%
 %           'alpha': the absorbtion parameter to use in [0, 1]
 %                    (default: 1)
 %    'walk_lengths': the set of walk lengths for which to report
@@ -35,15 +39,16 @@
 %                    pseudocount can also be specified.
 %                    (default: 1)
 %
-% outputs:
+% Outputs:
+%
 %   K_train: the set of (train x train) kernel matrices.
 %            K_train(:, :, i) corresponds to the ith largest
 %            specified walk length.
 %    K_test: the set of (train x test) kernel matrices.
 %            K_test(:, :, i) corresponds to the ith largest
 %            specified walk length.
-%
-% Copyright (c) 2013, Roman Garnett (romangarnett@gmail.com)
+
+% Copyright (c) 2013 Roman Garnett.
 
 function [K_train, K_test] = coinciding_walk_kernel(A, train_ind, ...
           observed_labels, test_ind, num_classes, walk_length, varargin)
